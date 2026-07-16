@@ -8,7 +8,11 @@ env:
 jobs:
   primeiro-job:
     runs-on: ubuntu-latest
+
     steps:
+      - run: echo "Terceiro passo" 
+      - name: Checkout
+        uses: actions/checkout@v5
       - name: Exibir informações
         run: |
           echo "Nome do curso - ${{ env.CURSO }}"

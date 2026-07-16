@@ -5,7 +5,7 @@ jobs:
   segundo-job:
     runs-on: ubuntu-latest
     steps:  
-      - run: echo "Primeiro passo" 
+      - run: echo "Segundo passo" 
       - name: Checkout
         uses: actions/checkout@v5
      
