@@ -1,0 +1,21 @@
+name: Segundo Workflow
+on:
+  push:
+jobs:
+  segundo-job:
+    runs-on: ubuntu-latest
+    steps:  
+      - run: echo "Primeiro passo" 
+      - name: Checkout
+        uses: actions/checkout@v5
+     
+      - name: Data e hora
+        run: date
+      - name: Sistema operacional
+        run: uname -a
+      - name: Git Version
+        run: git --version
+      - name: Exibir README.md
+        run: cat README.md
+      - name: Lista arquivos
+        run: ls ${{ github.workspace }}
